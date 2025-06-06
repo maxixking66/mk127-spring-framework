@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="secondService" name="secondService" class="ir.maktabsharif127.spring.service.SecondService">
+
+    </bean>
+
+    <bean id="firstService" name="firstService" class="ir.maktabsharif127.spring.service.FirstService">
+        <constructor-arg ref="secondService"/>
+        <property name="name" value="mohsen"/>
+    </bean>
+
+</beans>
