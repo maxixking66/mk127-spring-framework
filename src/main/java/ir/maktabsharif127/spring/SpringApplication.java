@@ -1,8 +1,7 @@
 package ir.maktabsharif127.spring;
 
-import ir.maktabsharif127.spring.service.FirstService;
-import ir.maktabsharif127.spring.service.SecondService;
-import ir.maktabsharif127.spring.service.ThirdService;
+import ir.maktabsharif127.spring.service.Repository;
+import ir.maktabsharif127.spring.service.Service;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,13 +12,11 @@ public class SpringApplication {
                 "ir.maktabsharif127.spring"
         );
 
-        SecondService secondService = applicationContext.getBean(SecondService.class);
+        Repository secondService = applicationContext.getBean(Repository.class);
         secondService.performLogic();
 
-        FirstService firstService = applicationContext.getBean(FirstService.class);
+        Service firstService = applicationContext.getBean(Service.class);
         firstService.performLogic();
-
-        ThirdService bean = applicationContext.getBean(ThirdService.class);
 
     }
 }
