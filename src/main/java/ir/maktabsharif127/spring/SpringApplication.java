@@ -2,8 +2,8 @@ package ir.maktabsharif127.spring;
 
 import com.github.javafaker.Faker;
 import ir.maktabsharif127.spring.service.CityService;
-import ir.maktabsharif127.spring.service.Repository;
-import ir.maktabsharif127.spring.service.Service;
+import ir.maktabsharif127.spring.service.MyRepository;
+import ir.maktabsharif127.spring.service.MyService;
 import ir.maktabsharif127.spring.util.TestService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -21,9 +21,9 @@ public class SpringApplication {
 //                "ir.maktabsharif127.spring"
                 SpringApplication.class
         );
-        Repository secondService = applicationContext.getBean(Repository.class);
+        MyRepository secondService = applicationContext.getBean(MyRepository.class);
         secondService.performLogic();
-        Service firstService = applicationContext.getBean(Service.class);
+        MyService firstService = applicationContext.getBean(MyService.class);
         firstService.performLogic();
         TestService bean = applicationContext.getBean(TestService.class);
     }

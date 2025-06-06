@@ -1,15 +1,15 @@
 package ir.maktabsharif127.spring.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class Service {
+@Service
+public class MyService {
 
-    private final Repository repository;
+    private final MyRepository repository;
 
     private final CityService cityService;
 
-    public Service(Repository repository, CityService cityService) {
+    public MyService(MyRepository repository, CityService cityService) {
         this.repository = repository;
         this.cityService = cityService;
     }
