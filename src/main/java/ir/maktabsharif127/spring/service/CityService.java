@@ -1,7 +1,13 @@
 package ir.maktabsharif127.spring.service;
 
-import org.springframework.stereotype.Component;
+import com.github.javafaker.Faker;
 
-@Component
+//@Component
 public class CityService {
+
+    private final Faker faker;
+
+    public CityService(Faker faker) {
+        this.faker = faker;
+    }
 }
