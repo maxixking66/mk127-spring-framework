@@ -6,8 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class FirstService {
 
-    @Autowired
     private SecondService secondService;
+
+    @Autowired
+    public void setSecondService(SecondService secondService) {
+        this.secondService = secondService;
+    }
 
     public void performLogic() {
         System.out.println("in perform logic method in first service");
