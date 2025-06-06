@@ -1,21 +1,20 @@
 package ir.maktabsharif127.spring.service;
 
+import ir.maktabsharif127.spring.repository.BaseRepository;
+import ir.maktabsharif127.spring.repository.SecondRepositoryImpl;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MyService {
 
-    private final MyRepository repository;
+    private final BaseRepository repository;
 
-    private final CityService cityService;
-
-    public MyService(MyRepository repository, CityService cityService) {
+    public MyService(@Qualifier(SecondRepositoryImpl.BEAN_NAME) BaseRepository repository) {
         this.repository = repository;
-        this.cityService = cityService;
     }
 
     public void performLogic() {
         System.out.println("in perform logic method in first service");
-        repository.performLogic();
     }
 }
